@@ -22,10 +22,16 @@
       </div>
     </header>
     <% if notice %>
-      <p class="notice"><%= notice %></p>
+      <div class="notice">
+        <span><%= notice %></span>
+        <span id="notice-close">X</span>
+      </div>
     <% end %>
     <% if alert %>
-      <p class="alert"><%= alert %></p>
+      <div class="alert">
+        <span><%= alert %></span>
+        <span id="alert-close>X</span>
+      </div>
     <% end %>
     <%= yield %>
   </body>
