@@ -14,10 +14,10 @@
 .alert {
   background: rgb(248, 69, 69);
 }
-
-#notice-close, #alert-close {
+.close {
   cursor: pointer;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -42,4 +42,8 @@ header .main {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+.container {
+  padding: 10px 15px;
 }
