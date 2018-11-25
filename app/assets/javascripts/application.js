@@ -17,10 +17,11 @@
 //= require turbolinks
 //= require_tree .
 $('html').ready(function() {
-  $('#notice-close').click(function() {
-    $('.notice').slideUp();
-  });
-  $('#alert-close').click(function() {
-    $('.alert').slideUp();
+  $('.notice, .alert').click(function() {
+    var message = $(this);
+
+    $(message.children('.close')).click(function() {
+      message.slideUp()
+    });
   });
 });
