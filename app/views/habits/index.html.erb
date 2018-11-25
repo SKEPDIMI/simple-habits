@@ -1,1 +1,21 @@
-<h2>My Habits</h2>
+<div class="container">
+  <h2>My Habits</h2>
+  <table id="habits-table">
+    <tr>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+    <% if @habits.any? %>
+      <% @habits.each do |habit| %>
+        <tr>
+          <td><%= habit.title %></td>
+          <td><%= habit.complete %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+  <form id="habits-form">
+    <td><input placeholder="New Habit" id="title" required/></td>
+    <td><button>Create habit</button></td>
+  </form>
+</div>

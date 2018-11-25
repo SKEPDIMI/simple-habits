@@ -21,18 +21,20 @@
         <% end %>
       </div>
     </header>
-    <% if notice %>
-      <div class="notice">
-        <span><%= notice %></span>
-        <span id="notice-close">X</span>
-      </div>
-    <% end %>
-    <% if alert %>
-      <div class="alert">
-        <span><%= alert %></span>
-        <span id="alert-close>X</span>
-      </div>
-    <% end %>
+    <div id="messages-container">
+      <% if notice %>
+        <div class="notice">
+          <span><%= notice %></span>
+          <span class="close">X</span>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert">
+          <span><%= alert %></span>
+          <span class="close">X</span>
+        </div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
